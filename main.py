@@ -35,7 +35,7 @@ def getImage() :
         "https://cdn.plus.amanaimages.com/uploads/items/000/486/62/preview/FYI00048662.jpg",
         "https://farm4.static.flickr.com/3644/3648450139_644bbfb746.jpg",
     ]
-    rand = int(random.uniform(0, 15))
+    rand = int(random.uniform(0, 11))
     return imageList[rand]
 
 @app.route("/")
