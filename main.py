@@ -78,6 +78,10 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             imgMessages)
+    else : 
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage("猫に関するメッセージを送ると画像を送ってくれます！"))
 
 if __name__ == "__main__":
 #    app.run()
