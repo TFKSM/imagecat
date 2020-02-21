@@ -24,7 +24,6 @@ def getImage() :
     imageList = [
         "https://d1f5hsy4d47upe.cloudfront.net/f3/f36c375c339f1212cceb122fdb9d0808_t.jpeg",
         "https://i.pinimg.com/originals/e8/1d/22/e81d226c27de0167cd4da2682ddfbf16.jpg",
-        "https://img.my-best.com/press_component/images/000/122/617/c94e42c79c3f596c893d44b0267f96d15f09f36d.jpg?ixlib=rails-4.0.0&q=70&lossless=0&w=690&fit=max&s=24a8d15ccb5084961c4ae2d1bf2b9b81",
         "https://news.p-mom.net/wp-content/uploads/2018/02/9cfd8c4279f16b3c1fb732b2a205b0bc_t.jpeg",
         "https://d1f5hsy4d47upe.cloudfront.net/6a/6adb9b83ef9f5ebb117aa7e58c5aa761_t.jpeg",
         "https://lh3.googleusercontent.com/proxy/ZBMVLmouvPf7sNX7s8aNSsJpwB4bno_YBPuLZ0rGKbraBguULWpxdhymAytqLkR9-P42Pud8YBvxmGBNNjSi38EL5mI",
@@ -40,7 +39,7 @@ def getImage() :
         
     ]
     rand = int(random.uniform(0, 15))
-    return imageList[1]
+    return imageList[2]
 
 @app.route("/")
 def hello_world():
