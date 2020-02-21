@@ -74,8 +74,8 @@ def handle_message(event):
     checkNyaList = ["にゃ", "猫", "ねこ", "NEKO", "neko", "まただび", "キャット", "きゃっと", "肉球", "にくきゅう", "かわいい"]
     
     for chk in checkNyaList :
-    if chk in text : 
-        checkNya = True
+        if chk in text : 
+            checkNya = True
     
     if checkNya :
         line_bot_api.reply_message(
