@@ -70,6 +70,10 @@ def handle_message(event):
     messages = ImageSendMessage(imgUrl, imgUrl)
     
     line_bot_api.reply_message(
+       event.reply_token,
+       TextSendMessage(text=messages))
+    
+    line_bot_api.reply_message(
         event.reply_token,
         messages
     )
