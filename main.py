@@ -71,7 +71,7 @@ def handle_message(event):
     
     line_bot_api.reply_message(
        event.reply_token,
-       TextSendMessage(text=messages))
+       TextSendMessage("みたで！"))
     
     line_bot_api.reply_message(
         event.reply_token,
