@@ -65,18 +65,30 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     text = event.message.text
+    
+    # 画像
     imgUrl = getImage()
+    imgMessages = ImageSendMessage(imgUrl, imgUrl)
     
-    messages = ImageSendMessage(imgUrl, imgUrl)
+    checkNya = False
+    checkNyaList = ["にゃ", "猫", "ねこ", "NEKO", "neko", "まただび", "キャット", "きゃっと", "肉球", "にくきゅう", "かわいい"]
     
-    line_bot_api.reply_message(
-       event.reply_token,
-       TextSendMessage("みたで！"))
+    for chk in checkNyaList :
+    if chk in text : 
+        checkNya = True
     
-    line_bot_api.reply_message(
-        event.reply_token,
-        messages
-    )
+    if checkNya :
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage("みたで！"))
+        line_bot_api.reply_message(
+            event.reply_token,
+            imgMessages)
+    else : 
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage("猫に関するメッセージを送ると画像を送ってくれます！"))
+        
 
 if __name__ == "__main__":
 #    app.run()
