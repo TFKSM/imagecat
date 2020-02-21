@@ -68,7 +68,7 @@ def handle_message(event):
     imgMessages = ImageSendMessage(imgUrl, imgUrl)
         
     checkNya = False
-    checkNyaList = ["にゃ", "猫", "ねこ", "NEKO", "neko", "まただび", "キャット", "きゃっと", "肉球", "にくきゅう", "かわいい"]
+    checkNyaList = ["にゃ", "猫", "ねこ", "NEKO", "neko", "まただび", "キャット", "きゃっと", "肉球", "にくきゅう", "かわいい", "ねーこ", "ちゅーる", "チュール", "ねっこ"]
     
     for chk in checkNyaList :
         if chk in text : 
