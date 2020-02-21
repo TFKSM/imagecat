@@ -20,6 +20,13 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
+def make_image_message():
+    messages = ImageSendMessage(
+        original_content_url="https://d1f5hsy4d47upe.cloudfront.net/f3/f36c375c339f1212cceb122fdb9d0808_t.jpeg", 
+        preview_image_url="https://d1f5hsy4d47upe.cloudfront.net/f3/f36c375c339f1212cceb122fdb9d0808_t.jpeg"
+    )
+    return messages
+
 @app.route("/")
 def hello_world():
     return "Hello!! world!"
@@ -49,12 +56,6 @@ def handle_message(event):
         TextSendMessage(make_image_messages())
     )
 
-def make_image_message():
-    messages = ImageSendMessage(
-        original_content_url="https://d1f5hsy4d47upe.cloudfront.net/f3/f36c375c339f1212cceb122fdb9d0808_t.jpeg", 
-        preview_image_url="https://d1f5hsy4d47upe.cloudfront.net/f3/f36c375c339f1212cceb122fdb9d0808_t.jpeg"
-    )
-    return messages
 if __name__ == "__main__":
 #    app.run()
     port = int(os.getenv("PORT"))
