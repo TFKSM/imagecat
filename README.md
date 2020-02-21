@@ -1,2 +1,0 @@
-# imagecat
-imagecat
