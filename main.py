@@ -26,7 +26,6 @@ def getImage() :
         "https://i.pinimg.com/originals/e8/1d/22/e81d226c27de0167cd4da2682ddfbf16.jpg",
         "https://news.p-mom.net/wp-content/uploads/2018/02/9cfd8c4279f16b3c1fb732b2a205b0bc_t.jpeg",
         "https://d1f5hsy4d47upe.cloudfront.net/6a/6adb9b83ef9f5ebb117aa7e58c5aa761_t.jpeg",
-        "https://lh3.googleusercontent.com/proxy/ZBMVLmouvPf7sNX7s8aNSsJpwB4bno_YBPuLZ0rGKbraBguULWpxdhymAytqLkR9-P42Pud8YBvxmGBNNjSi38EL5mI",
         "https://d1f5hsy4d47upe.cloudfront.net/d8/d88c9e6b728d8d84c41aa57269baf85d_t.jpeg",
         "https://www.pakutaso.com/shared/img/thumb/tom190303AISD_TP_V1.jpg",
         "https://d2dcan0armyq93.cloudfront.net/photo/odai/600/e91c5dd8898fe1b30373c6e26779e845_600.jpg",
@@ -35,11 +34,9 @@ def getImage() :
         "https://xn--n8jx07hl4dx2oy5n.net/wp-content/uploads/2016/07/cat.jpg",
         "https://cdn.plus.amanaimages.com/uploads/items/000/486/62/preview/FYI00048662.jpg",
         "https://farm4.static.flickr.com/3644/3648450139_644bbfb746.jpg",
-        "https://lh3.googleusercontent.com/proxy/4lC7J1h8hdzT6d12HFO7iEmsELW5o4xt2y0Q9dblmzqsPwYIkOHSptDiEHR-lrjG9Km1vkBgU4TYHn1vIfUi5XgB1CuelO15p6ol0G2k11qzOZJsObB0G84bsk8JiBhsf2PuUbcfuSqguD-kMCrJLzBxSg",
-        
     ]
     rand = int(random.uniform(0, 15))
-    return imageList[3]
+    return imageList[rand]
 
 @app.route("/")
 def hello_world():
