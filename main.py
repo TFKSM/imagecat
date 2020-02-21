@@ -39,7 +39,7 @@ def getImage() :
         
     ]
     rand = int(random.uniform(0, 15))
-    return imageList[2]
+    return imageList[3]
 
 @app.route("/")
 def hello_world():
